@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web App – Simple Interest Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="javascript.js"></script>
+</head>
+<body>
+  <center>
+  <h2>Simple Interest Calculator</h2>
+</center>
+  <div class="form-1">
+  <form><br>
+    <label>Enter Amount:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id="amt" onkeypress="isInputNumber(event)" type="text" name="amount" required><br><br>
+    <label>Enter Interset Rate:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="range" min="1" max="20.0" step="0.1" value="0" oninput="showvalues(this.value)">
+    <span id="rate"></span><br><br>
+    <label>Enter Number of year:</label>
+    <select id="year">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select><br><br>
+    
+    <center> <input class="button" type="button" onclick="cal();" value="Compute Interset"><br><br></center>
+   
+    <div id="errorpop" class="msg">
+      <b id="error">*Please enter positive numbers</b>
+    </div>
+<div id="output">
+  
+<p>If you deposit <span id="d-amt"></span>,<br>
+at an Interest rate of <span id="d-rate"></span>.<br>
+You will recieve an amount of <span id="d-final"></span>,<br>
+in the year <span id="d-time"></span>.
+</p>  
+  </div>
+  </form>
+<div id="cp">Ⓒ Everyone Can Get Rich</div>
+</div>
+
+</body>
+</html>
